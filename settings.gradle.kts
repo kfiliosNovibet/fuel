@@ -1,14 +1,45 @@
-rootProject.name = "Fuel-MPP"
-
-include(":fuel")
-include(":fuel-forge-jvm")
-include(":fuel-jackson-jvm")
-include(":fuel-kotlinx-serialization")
-include(":fuel-moshi-jvm")
-
-include(":samples:httpbin-wasm")
-include(":samples:mockbin-native")
-
 pluginManagement {
-    includeBuild("plugins")
+    repositories {
+        google()
+        mavenCentral()
+        jcenter()
+        maven(url = "https://plugins.gradle.org/m2/")
+    }
+    resolutionStrategy {
+        eachPlugin {
+            if (requested.id.id == Android.libPlugin) {
+                useModule("com.android.tools.build:gradle:${requested.version}")
+            }
+            if (requested.id.id == Jacoco.Android.plugin) {
+                useModule("com.dicedmelon.gradle:jacoco-android:${requested.version}")
+            }
+            if (requested.id.id == KotlinX.Serialization.plugin) {
+                useModule("org.jetbrains.kotlin:kotlin-serialization:${requested.version}")
+            }
+        }
+    }
+}
+
+val projects = listOf(
+        Fuel.name,
+        Fuel.Android.name,
+        Fuel.Coroutines.name,
+        Fuel.Forge.name,
+        Fuel.Gson.name,
+        Fuel.Jackson.name,
+        Fuel.Json.name,
+        Fuel.KotlinSerialization.name,
+        Fuel.LiveData.name,
+        Fuel.Moshi.name,
+        Fuel.Reactor.name,
+        Fuel.RxJava.name,
+        Fuel.Stetho.name,
+        Fuel.Test.name
+)
+
+include(*(projects.toTypedArray()))
+
+val includeSample: String by settings
+if (includeSample == "true") {
+    include(":sample")
 }
