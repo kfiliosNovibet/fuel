@@ -1,5 +1,6 @@
 package com.github.kittinunf.fuel.util
 
+import org.brotli.dec.kt.BrotliInputStream
 import java.io.InputStream
 import java.util.zip.GZIPInputStream
 import java.util.zip.InflaterInputStream
@@ -20,6 +21,7 @@ fun InputStream.decode(encoding: String, unsupported: DecodeFallbackCallback = U
     when (encoding.trim().toLowerCase()) {
         "gzip" -> GZIPInputStream(this)
         "deflate" -> InflaterInputStream(this)
+        "br" -> BrotliInputStream(this)
         // HTTPClient handles chunked, but does not remove the Transfer-Encoding Header
         "chunked", "identity", "" -> this
         else -> unsupported(this, encoding)

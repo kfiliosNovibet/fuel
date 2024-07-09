@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartextTrafficPermitted="true">
+        <domain includeSubdomains="true">services-signalrhub.devgr-novibet.systems</domain>
+        <domain includeSubdomains="true">vgskinnings.aitcloud.de</domain>
+        <domain includeSubdomains="true">vgls.betradar.com</domain>
+        <domain includeSubdomains="true">vflive.aitcloud.de</domain>
+        <domain includeSubdomains="true">feature3_native_virtuals_gr_nt.dev-app-02.local</domain>
+        <domain includeSubdomains="true">novinative-01.dev-acc-01.local</domain>
+        <domain includeSubdomains="true">web-sportsbookfeed.prd-novibet.systems</domain>
+        <domain includeSubdomains="true">native-casino.novibet.gr</domain>
+        <domain includeSubdomains="true">novinativeapi-01.dev-sb-01.local</domain>
+        <domain includeSubdomains="true">novinativeapi-01.dev-acc-01.local</domain>
+        <domain includeSubdomains="true">novinativeapi-01.acc-01.dev.zone</domain>
+        <domain includeSubdomains="true">uiux-novinativeapi3.dev-srv1.local</domain>
+        <domain includeSubdomains="true">novinativeapi2018.iskou.local</domain>
+        <domain includeSubdomains="true">uiux-novinativeapi2.dev-srv1.local</domain>
+        <domain includeSubdomains="true">uiux-novinative2.dev-srv1.local</domain>
+        <domain includeSubdomains="true">uiux-novinativeapi.dev-srv1.local</domain>
+        <domain includeSubdomains="true">novinative2018.iskou.local</domain>
+        <domain includeSubdomains="true">uiux-novinative.dev-srv1.local</domain>
+        <domain includeSubdomains="true">devnative-api.novibet.com</domain>
+        <domain includeSubdomains="true">native-api2.novibet.com</domain>
+        <domain includeSubdomains="true">native-api.novibet.com/signalr/</domain>
+        <domain includeSubdomains="true">devnative-api2.novibet.com</domain>
+        <domain includeSubdomains="true">devnative3-api.novibet.com</domain>
+        <domain includeSubdomains="true">uiux-novinativeapi3.dev-srv1.local/el/useraccount/login/userstatus</domain>
+        <domain includeSubdomains="true">238c74c2b3bb.ngrok.io</domain>
+        <domain includeSubdomains="true">love_giftwheel-novinative-api.app-01.dev.zone</domain>
+        <domain includeSubdomains="true">novinative2018.api.vpan.local</domain>
+        <domain includeSubdomains="true">greek_taxation-novinative-api.dev-app-01.local</domain>
+        <domain includeSubdomains="true">novileague_2nd_phase-novinative-api.app-01.dev.zone</domain>
+        <domain includeSubdomains="true">combined_challenge-novinative-api.app-01.dev.zone</domain>
+        <domain includeSubdomains="true">novinativeapi.acc-01.dev.zone</domain>
+        <domain includeSubdomains="true">novinativeapi-02.acc-01.dev.zone</domain>
+        <domain includeSubdomains="true">native-api2-azure.novibet.com</domain>
+        <domain includeSubdomains="true">native2.novibet.com</domain>
+        <domain includeSubdomains="true">native-api.novibet.com</domain>
+        <domain includeSubdomains="true">native.novibet.com</domain>
+        <domain includeSubdomains="true">web-novibet-native-gr.prd-novibet.zone</domain>
+        <domain includeSubdomains="true">novinative-api.dev-app-01.local</domain>
+        <domain includeSubdomains="true">bet_radio-novinative-api.app-01.dev.zone</domain>
+        <domain includeSubdomains="true">solid1.streamupsolutions.com</domain>
+        <domain includeSubdomains="true">euro_challenge-novinative-api.dev-app-01.local</domain>
+        <domain includeSubdomains="true">novinativeapi-05.acc-01.dev.zone</domain>
+        <domain includeSubdomains="true">native-api.stg.novibet.com</domain>
+        <domain includeSubdomains="true">native.stg.novibet.com</domain>
+        <domain includeSubdomains="true">ws-gr.apinovi.com</domain>
+        <domain includeSubdomains="true">native-api.stg.novibet</domain>
+        <domain includeSubdomains="true">novinativeapi.dev-acc-01.local</domain>
+        <domain includeSubdomains="true">angular-novinative-gr.dev-app-01.local</domain>
+        <domain includeSubdomains="true">novileague_leagues-novinative-api.dev-mark-01.local/</domain>
+        <domain includeSubdomains="true">mdb-399-novinative-api.dev-mark-01.local</domain>
+        <domain includeSubdomains="true">mdb-399-start-novinative-api.dev-mark-01.local</domain>
+        <domain includeSubdomains="true">novinative2018.local</domain>
+        <domain includeSubdomains="true">novinativeapi.dev-sb-01.local</domain>
+        <domain includeSubdomains="true">192.168.145.231</domain>
+        <domain includeSubdomains="true">novinative-02.dev-acc-01.local</domain>
+        <domain includeSubdomains="true">novinativeapi-02.dev-acc-01.local</domain>
+        <domain includeSubdomains="true">novinative.dev-acc-01.local</domain>
+        <domain includeSubdomains="true">novinative02-gr.dev-app-01.local</domain>
+        <domain includeSubdomains="true">novinative-01.dev-sb-01.local</domain>
+        <domain includeSubdomains="true">mdb-820-novinative-api.dev-mark-01.local</domain>
+        <domain includeSubdomains="true">novinative-02.dev-sb-01.local</domain>
+        <domain includeSubdomains="true">novinative.dev-sb-01.local</domain>
+        <domain includeSubdomains="true">mdb-1040-novinative-api.dev-mark-01.local/api</domain>
+        <domain includeSubdomains="true">mdb-1153-novinative.dev-mark-01.local</domain>
+        <domain includeSubdomains="true">feature_sportsbook_fields_ie_nt.dev-app-02.local</domain>
+        <domain includeSubdomains="true">web-novibet-native-gr4.devgr-novibet.systems</domain>
+        <domain includeSubdomains="true">web-betslips.devgr-novibet.systems</domain>
+        <domain includeSubdomains="true">angular-novimobile-gr.dev-app-01.local</domain>
+        <domain includeSubdomains="true">web-betslips.devgr-novibet.systems/</domain>
+        <domain includeSubdomains="true">feature_uisb-739-betslip_nt_gr.dev-app-02.local</domain>
+        <domain includeSubdomains="true">vgskinningsstaging.aitcloud.de</domain>
+        <domain includeSubdomains="true">vfskinningsstaging.aitcloud.de</domain>
+        <domain includeSubdomains="true">vfstaging.aitcloud.de</domain>
+        <domain includeSubdomains="true">vglsstaging.betradar.com</domain>
+        <domain includeSubdomains="true">vgdirectdatastaging.aitcloud.de</domain>
+        <domain includeSubdomains="true">web-novibet-native-spt.devgr-novibet.systems</domain>
+        <domain includeSubdomains="true">services-sportsbookfeed.devgr-novibet.systems</domain>
+        <domain includeSubdomains="true">web-sportsbookgateway.devgr-novibet.systems</domain>
+        <domain includeSubdomains="true">storage.googleapis.com</domain>
+        <domain includeSubdomains="true">mqtt-dev.rushsports.io</domain>
+    </domain-config>
+    <debug-overrides>
+        <trust-anchors>
+            <certificates src="system" />
+            <certificates src="user" />
+        </trust-anchors>
+    </debug-overrides>
+</network-security-config>
+
+

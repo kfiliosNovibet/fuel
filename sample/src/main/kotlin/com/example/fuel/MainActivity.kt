@@ -9,9 +9,11 @@ import com.github.kittinunf.fuel.core.Method
 import com.github.kittinunf.fuel.core.FuelError
 import com.github.kittinunf.fuel.core.FileDataPart
 import com.github.kittinunf.fuel.core.FuelManager
+import com.github.kittinunf.fuel.core.Headers
 import com.github.kittinunf.fuel.core.ResponseDeserializable
 import com.github.kittinunf.fuel.core.extensions.authentication
 import com.github.kittinunf.fuel.core.extensions.cUrlString
+import com.github.kittinunf.fuel.core.requests.DefaultRequest
 import com.github.kittinunf.fuel.coroutines.awaitStringResponseResult
 import com.github.kittinunf.fuel.gson.responseObject
 import com.github.kittinunf.fuel.httpDelete
@@ -38,6 +40,8 @@ import kotlinx.coroutines.GlobalScope
 import kotlinx.coroutines.launch
 import java.io.File
 import java.io.Reader
+import java.net.URL
+import java.util.TimeZone
 
 class MainActivity : AppCompatActivity() {
 
@@ -79,6 +83,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun execute() {
+        getNoviTest()
         httpGet()
         httpPut()
         httpPost()
@@ -87,12 +92,37 @@ class MainActivity : AppCompatActivity() {
         httpDownload()
         httpUpload()
         httpBasicAuthentication()
-        httpListResponseObject()
-        httpResponseObject()
-        httpGsonResponseObject()
-        httpCancel()
+//        httpListResponseObject()
+//        httpResponseObject()
+//        httpGsonResponseObject()
+//        httpCancel()
         httpRxSupport()
-        httpLiveDataSupport()
+//        httpLiveDataSupport()
+    }
+
+    private fun getNoviTest() {
+        val headers = mutableMapOf("Content-Type" to "application/json",
+            "Sportsbook" to "1.0",
+            "User-agent" to "Sportsbook/3.16.00.504, ${System.getProperty("http.agent")}",
+            "Platform" to "Android",
+            "Accept-Host" to "BR",
+            "x-gw-application-name" to "NoviBR",
+            "x-gw-domain-key" to "_BR",
+            "x-gw-cms-key" to "_BR",
+            "x-gw-country-sysname" to "BR",
+            "x-gw-currency-sysname" to "BRL",
+            "x-gw-language-sysname" to "",
+            "x-gw-channel" to "AndroidMobile",
+            "x-gw-state-sysname" to "",
+            "x-gw-odds-representation" to "1",
+            "x-gw-client-timezone" to (TimeZone.getDefault().id ?: ""),
+            "temp-usenew" to "true")//multiple bb
+        val fuelRequest = DefaultRequest(method = Method.GET, url = URL( "https://native.br.novibet.com/account-api/get-application-custom-headers?lang=pt-BR&oddsR=1"))
+            .header(headers)
+            .header(Headers.ACCEPT_ENCODING, "br")
+        Fuel.request(fuelRequest).responseString { request, response, result ->
+            update(result)
+        }
     }
 
     private suspend fun executeCoroutine() {
