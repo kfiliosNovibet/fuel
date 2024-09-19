@@ -24,23 +24,23 @@ The easiest HTTP networking library for Kotlin/Android.
 
 We offer maven and jitpack installations. Maven via bintray only has stable releases but jitpack can be used to build any branch, commit and version.
 
-### Maven
-You can [download](https://bintray.com/kittinunf/maven/Fuel-Android/_latestVersion) and install `Fuel` with `Maven` and `Gradle`. The core package has the following dependencies:
-* Kotlin - [![Kotlin](https://img.shields.io/badge/Kotlin-1.4.10-blue.svg)](https://kotlinlang.org)
-* [ Result ](https://github.com/kittinunf/result/) - 3.1.0
+[//]: # (### Maven)
+
+[//]: # (You can [download]&#40;https://bintray.com/kittinunf/maven/Fuel-Android/_latestVersion&#41; and install `Fuel` with `Maven` and `Gradle`. The core package has the following dependencies:)
+
+[//]: # (* Kotlin - [![Kotlin]&#40;https://img.shields.io/badge/Kotlin-1.4.10-blue.svg&#41;]&#40;https://kotlinlang.org&#41;)
+
+[//]: # (* [ Result ]&#40;https://github.com/kittinunf/result/&#41; - 3.1.0)
 
 ```groovy
-  //core
-  implementation 'com.github.kittinunf.fuel:fuel:<latest-version>'
-  
-  //packages
-  implementation 'com.github.kittinunf.fuel:<package>:<latest-version>'
+implementation 'com.github.kfiliosNovibet.fuel:fuel:2.4.1'
 ```
 
 Make sure to include `mavenCentral()` in your repositories (`jcenter()` is deprecated, new releases starting from 2.2.3 are hosted on `mavenCentral()`)
 ```groovy
 repositories {
   mavenCentral()
+  maven { url 'https://jitpack.io' }
 }
 ```
 
@@ -62,38 +62,63 @@ Each of the extensions / integrations has to be installed separately.
 | [`fuel-rxjava`](./fuel-rxjava) | _Reactive Programming_: Responses as [`Single`](http://reactivex.io/RxJava/2.x/javadoc/io/reactivex/Single.html) (**RxJava 2.x**)
 | [`fuel-stetho`](./fuel-stetho) | _Utility_: Debug utility for Android on Chrome Developer Tools, [`Stetho`](https://github.com/facebook/stetho)
 
-### Jitpack
+[//]: # (### Jitpack)
 
-If you want a SNAPSHOT distribution, you can use [`Jitpack`](https://jitpack.io/#kittinunf/fuel)
+[//]: # ()
+[//]: # (If you want a SNAPSHOT distribution, you can use [`Jitpack`]&#40;https://jitpack.io/#kittinunf/fuel&#41;)
 
-```kotlin
-repositories {
-  maven(url = "https://www.jitpack.io") {
-    name = "jitpack"
-  }
-}
+[//]: # ()
+[//]: # (```kotlin)
 
-dependencies {
-  //core
-  implementation(group = "com.github.kittinunf.fuel", name = "fuel", version = "-SNAPSHOT")
-  
-  //packages
-  // replace <package> with the package name e.g. fuel-coroutines
-  implementation(group = "com.github.kittinunf.fuel", name = "<package>", version = "-SNAPSHOT")
-}
-```
+[//]: # (repositories {)
 
-or
+[//]: # (  maven&#40;url = "https://www.jitpack.io"&#41; {)
 
-```kotlin
-dependencies {
-  //core and/or packages
-  // replace <package> with the package name e.g. fuel-coroutines
-  listof("fuel", "<package>").forEach {
-    implementation(group = "com.github.kittinunf.fuel", name = it, version = "-SNAPSHOT")
-  }
-}
-```
+[//]: # (    name = "jitpack")
+
+[//]: # (  })
+
+[//]: # (})
+
+[//]: # ()
+[//]: # (dependencies {)
+
+[//]: # (  //core)
+
+[//]: # (  implementation&#40;group = "com.github.kittinunf.fuel", name = "fuel", version = "-SNAPSHOT"&#41;)
+
+[//]: # (  )
+[//]: # (  //packages)
+
+[//]: # (  // replace <package> with the package name e.g. fuel-coroutines)
+
+[//]: # (  implementation&#40;group = "com.github.kittinunf.fuel", name = "<package>", version = "-SNAPSHOT"&#41;)
+
+[//]: # (})
+
+[//]: # (```)
+
+[//]: # ()
+[//]: # (or)
+
+[//]: # ()
+[//]: # (```kotlin)
+
+[//]: # (dependencies {)
+
+[//]: # (  //core and/or packages)
+
+[//]: # (  // replace <package> with the package name e.g. fuel-coroutines)
+
+[//]: # (  listof&#40;"fuel", "<package>"&#41;.forEach {)
+
+[//]: # (    implementation&#40;group = "com.github.kittinunf.fuel", name = it, version = "-SNAPSHOT"&#41;)
+
+[//]: # (  })
+
+[//]: # (})
+
+[//]: # (```)
 
 #### Configuration
 - `group` is made up of `com.github` as well as username and project name
