@@ -11,7 +11,7 @@ pluginManagement {
                 useModule("com.android.tools.build:gradle:${requested.version}")
             }
             if (requested.id.id == Jacoco.Android.plugin) {
-                useModule("com.dicedmelon.gradle:jacoco-android:${requested.version}")
+//                useModule("com.dicedmelon.gradle:jacoco-android:${requested.version}")
             }
             if (requested.id.id == KotlinX.Serialization.plugin) {
                 useModule("org.jetbrains.kotlin:kotlin-serialization:${requested.version}")
